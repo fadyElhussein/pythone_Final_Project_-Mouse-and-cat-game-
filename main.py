@@ -1,3 +1,4 @@
+
 import time
 import pygame
 import random
@@ -225,7 +226,10 @@ while True:
         message = font1.render(("You Win"), True, (0, 0, 0))
         font1 = pygame.font.Font(pygame.font.get_default_font(), 50)
         window.blit(message, (175 , 250))
-        time.sleep(0.5)
+        pygame.display.update()
+        time.sleep(1)
+        pygame.quit()
+        exit()
 
 
     mouseY += mouseY_change
@@ -236,4 +240,3 @@ while True:
     mouse(mouseX, mouseY)
     show_steps(textX, textY)
     pygame.display.update()
-
